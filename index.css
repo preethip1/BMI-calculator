@@ -1,0 +1,84 @@
+.outline {
+    height: 600px;
+    width: 600px;
+    background-color: turquoise;
+    display: flex;
+    margin: 2%;
+    flex-direction: column;
+}
+
+.age, .age-input {
+    flex-grow:5 ;
+    padding: 2%;
+    margin: 2%;
+    background-color: wheat;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.gender , .gender-input {
+    flex-grow: 5;
+    padding: 2%;
+    margin: 2%; 
+    background-color: wheat;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+
+
+}
+
+.height , .height-input{
+    flex-grow: 5;
+    padding: 2%;
+    margin: 2%;
+    background-color: wheat;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+
+    
+
+}
+.weight ,.weight-input {
+    flex-grow: 5;
+    padding: 2%;
+    margin: 2%;
+    background-color: wheat;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+   
+
+}
+.submit {
+    flex-grow: 5;
+    padding: 2%;
+    align-items: center;
+    
+}
+.submit-input {
+    flex-grow: 5;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.output {
+    flex-grow: 11;
+    background-color: wheat;
+    margin: 2%;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+    
+}
