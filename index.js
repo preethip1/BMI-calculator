@@ -1,16 +1,43 @@
 function submit() {
     let age = $(".age-input")[0].value;
-    let weight = $(".weight-input")[0].value;
+    if (age.length <= 0 || age < 0) {
+        alert("Invalid age");
+        return;
+    }
+
+    let genderEl = $("input[name=gender]:checked")[0];
+    if (!genderEl) {
+        alert("Select gender");
+        return;
+    }
+
     let height = $(".height-input")[0].value;
-    let gender = $("input[name=gender]:checked")[0].value;
+    if (height.length <= 0 || height < 0) {
+        alert("Invalid height");
+        return;
+    }
+
+    let weight = $(".weight-input")[0].value;
+    if (weight.length <= 0 || weight < 0) {
+        alert("Invalid weight");
+        return;
+    }
+
     let bmi = calculateBMI(height, weight);
-    let status = bmiStatus(bmi);
-    let htmlString = `
-        <div>
-            <div> BMI:${bmi}</div>
-            <div> STATUS:${status}</div>
-        </div>`;
-    $(".output").append(htmlString)
+    try {
+        let status = bmiStatus(bmi);
+        let htmlString = `
+            <div class="wrapper">
+                <div class="bmi"> BMI: ${bmi}</div>
+                <div class="status"> STATUS: ${status}</div>
+            </div>`;
+        $(".output")[0].innerHTML = "";
+        $(".output").append(htmlString);
+    } catch (error) {
+        alert("Invalid value");
+        return;
+    }
+
 }
 function calculateBMI(height, weight) {
     let bmi = (10000 * weight) / (height * height)
